@@ -1,1 +1,10 @@
-<h3>Books</h3>
+
+<h1>Books</h1>
+  Search: <input type="text" ng-model="searchText">
+  <ul ng-repeat="book in books | filter : searchText">
+    <h4>Book {{$index +1}}</h4>
+    <li>Title: {{book.title}}</li>
+    <li>city: {{book.type}}</li>
+    <li>Price: {{book.price}}</li>
+    <hr>
+  </ul>
